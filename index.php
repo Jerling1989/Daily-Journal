@@ -21,6 +21,23 @@
 
 		if($error) {
 			echo 'There were errors in your sign up details: '.$error;
+		} else {
+			$link = mysqli_connect('localhost', 'root', 'root', 'journal_db');
+			$query = "SELECT * FROM `users` WHERE email='".mysqli_real_escape_string($link, $_POST['email'])."'";
+
+			$result = mysqli_query($link, $query);
+			$results = mysqli_num_rows($result);
+
+			if ($results) {
+				echo 'That email address is already registered. Would you like to log in?';
+			} else {
+				$query = "INSERT INTO users (email, password) VALUES ('".mysqli_real_escape_string($link, $_POST['email'])."', '".md5(md5($_POST['email']).$_POST['password'])."')";
+
+				mysqli_query($link, $query);
+
+				echo "You've been signed up!";
+			}
+
 		}
 
 	}
