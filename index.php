@@ -1,6 +1,11 @@
 <?php
 
-	if ($_POST['submit']) {
+	session_start();
+
+	$link = mysqli_connect('localhost', 'root', 'root', 'journal_db');
+
+
+	if ($_POST['submit']=='Sign Up') {
 
 		if (!$_POST['email']) {
 			$error.= '<br />Please enter your email address';
@@ -22,8 +27,8 @@
 		if($error) {
 			echo 'There were errors in your sign up details: '.$error;
 		} else {
-			$link = mysqli_connect('localhost', 'root', 'root', 'journal_db');
-			$query = "SELECT * FROM `users` WHERE email='".mysqli_real_escape_string($link, $_POST['email'])."'";
+
+			$query = "SELECT * FROM users WHERE email='".mysqli_real_escape_string($link, $_POST['email'])."'";
 
 			$result = mysqli_query($link, $query);
 			$results = mysqli_num_rows($result);
@@ -36,20 +41,64 @@
 				mysqli_query($link, $query);
 
 				echo "You've been signed up!";
+
+				$_SESSION['id']=mysqli_insert_id($link);
+				print_r($_SESSION);
+
+				// REDIRECT TO LOGGED IN PAGE
+
 			}
 
 		}
 
 	}
 
+
+
+	if ($_POST['submit']=='Log In') {
+
+		$query = "SELECT * FROM users WHERE email='".mysqli_real_escape_string($link, $_POST['login-email'])."' AND password='".md5(md5($_POST['login-email']).$_POST['login-password'])."' LIMIT 1";
+
+			$result = mysqli_query($link, $query);
+			$row = mysqli_fetch_array($result);
+
+			if ($row) {
+
+				$_SESSION['id'] = $row['id'];
+				print_r($_SESSION);
+
+				// REDIRECT TO LOGGED IN PAGE
+
+			} else {
+				echo 'We could not find a user with that email and password. Please try again.';
+			}
+
+	}
+
+
+
+
+
 ?>
 
+<!-- SIGN UP FORM -->
 <form method="post">
 	
-	<input type="email" name="email" id="email" />
+	<input type="email" name="email" id="email" value="<?php echo addslashes($_POST['email']); ?>" />
 
-	<input type="password" name="password" />
+	<input type="password" name="password" value="<?php echo addslashes($_POST['password']); ?>" />
 
 	<input type="submit" name="submit" value="Sign Up">
+
+</form>
+
+<!-- LOG IN FORM -->
+<form method="post">
+	
+	<input type="email" name="login-email" id="login-email" value="<?php echo addslashes($_POST['login-email']); ?>" />
+
+	<input type="password" name="login-password" value="<?php echo addslashes($_POST['login-password']); ?>" />
+
+	<input type="submit" name="submit" value="Log In">
 
 </form>
