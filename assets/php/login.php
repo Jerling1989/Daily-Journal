@@ -25,7 +25,7 @@
 		}
 
 		if($error) {
-			echo 'There were errors in your sign up details: '.$error;
+			$error = 'There were errors in your sign up details: '.$error;
 		} else {
 
 			$query = "SELECT * FROM users WHERE email='".mysqli_real_escape_string($link, $_POST['email'])."'";
@@ -34,7 +34,7 @@
 			$results = mysqli_num_rows($result);
 
 			if ($results) {
-				echo 'That email address is already registered. Would you like to log in?';
+				$error = 'That email address is already registered. Would you like to log in?';
 			} else {
 				$query = "INSERT INTO users (email, password) VALUES ('".mysqli_real_escape_string($link, $_POST['email'])."', '".md5(md5($_POST['email']).$_POST['password'])."')";
 
@@ -70,7 +70,7 @@
 				// REDIRECT TO LOGGED IN PAGE
 
 			} else {
-				echo 'We could not find a user with that email and password. Please try again.';
+				$error = 'We could not find a user with that email and password. Please try again.';
 			}
 
 	}
