@@ -21,15 +21,18 @@
 	<title>Daily Journal</title>
 
 	<!-- FAVICON -->
-	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../img/favicon.ico" type="image/x-icon">
 
 	<!-- META DATA -->
   <meta charset="utf-8" />
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- FONT AWESOME -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
 	<!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Passion+One|Roboto:500" rel="stylesheet">
 
 	<!-- RESET CSS LINK -->
   <link rel="stylesheet" type="text/css" href="../css/reset.css">
@@ -45,7 +48,7 @@
 <body id="main-page">
 	<nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-	  <a class="navbar-brand" href="#">Daily Journal</a>
+	  <a class="navbar-brand" href="#"><span class="logo">Daily Journal</span> <i class="fas fa-pencil-alt"></i></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -65,6 +68,14 @@
 	<!-- JOURNAL ENTRY -->
 	<div class="container">
 		<div class="row">
+
+			<div id="disclaimer" class="alert alert-primary alert-dismissible fade show" role="alert">
+			  <strong>Don't Worry About Losing Your Work!</strong> All of your updates and changes are saved automatically.
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    <span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+
 			<textarea class="form-control"><?php echo $journal; ?></textarea>
 		</div>
 	</div>
