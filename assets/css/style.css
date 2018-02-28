@@ -21,13 +21,15 @@ body {
 
 textarea {
 	margin-top: 60px !important;
-	background-color: rgba(255, 255, 255, 0.5) !important;
+	background-color: rgba(255, 255, 255, 0.7) !important;
+	font-family: 'Caveat Brush', cursive !important;
+	font-size: 26px !important;
 }
 
 h1 {
 	padding-top: 60px;
 	color: black !important;
-	font-family: 'Oswald', sans-serif !important;
+	font-family: 'Roboto', sans-serif !important;
 	font-size: 60px !important;
 	text-decoration: underline;
 }
@@ -47,8 +49,13 @@ p {
 }
 
 #main-nav {
-	background-color: black !important;
-	border-bottom: 5px white solid;
+	background-color: #7a8497 !important;
+	border-bottom: 5px grey solid;
+}
+
+.logo {
+	font-family: 'Passion One', cursive;
+	font-size: 24px !important;
 }
 
 
@@ -87,4 +94,10 @@ p {
 
 .form-group {
 	text-align: left;
+}
+
+#disclaimer {
+	width: 100%;
+	margin-top: 25px;
+	margin-bottom: -20px;
 }
