@@ -15,6 +15,15 @@ body {
   background-size: cover;
 }
 
+#main-page {
+	background-image: url(../img/paper-bg.jpg);
+}
+
+textarea {
+	margin-top: 60px !important;
+	background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
 h1 {
 	padding-top: 60px;
 	color: black !important;
@@ -28,6 +37,13 @@ p {
 	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	padding: 10px;
+}
+
+
+/* NAVBAR STYLES */
+.navbar {
+	background-color: black;
+	border-bottom: 5px white solid;
 }
 
 
