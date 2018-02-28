@@ -30,7 +30,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav id="login-nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
 	  <a class="navbar-brand" href="#">Daily Journal</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,6 +69,9 @@
 						if($error) {
 							echo '<div class="alert alert-danger" role="alert">'.addslashes($error).'</div>';
 						}
+						if($message) {
+							echo '<div class="alert alert-success" role="alert">'.addslashes($message).'</div>';
+						}
 
 					?>
 					
@@ -86,7 +89,7 @@
 				    	<input type="password" name="password" id="password" class="form-control" placeholder="Password" value="<?php echo addslashes($_POST['password']); ?>" />
 					  </div>
 
-					  <input class="btn btn-primary" type="submit" name="submit" value="Sign Up" />
+					  <input id="signup-btn" class="btn btn-dark" type="submit" name="submit" value="Sign Up" />
 
 					</form>
 					<!-- END SIGN UP FORM -->
