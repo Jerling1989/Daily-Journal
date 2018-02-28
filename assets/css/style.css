@@ -41,8 +41,13 @@ p {
 
 
 /* NAVBAR STYLES */
-.navbar {
-	background-color: black;
+#login-nav {
+	background-color: black !important;
+	border-bottom: 5px white solid;
+}
+
+#main-nav {
+	background-color: black !important;
 	border-bottom: 5px white solid;
 }
 
@@ -65,8 +70,15 @@ p {
 	margin-bottom: 15px;
 }
 
-.btn-primary {
+#signup-btn {
 	margin-bottom: 20px;
+	background-color: black;
+	color: white;
+}
+
+#signup-btn:hover {
+	background-color: white;
+	color: black;
 }
 
 #signup-form {
