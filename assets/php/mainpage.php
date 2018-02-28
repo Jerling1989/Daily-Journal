@@ -43,7 +43,7 @@
 </head>
 
 <body id="main-page">
-	<nav class="navbar navbar-expand-lg">
+	<nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
 	  <a class="navbar-brand" href="#">Daily Journal</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,8 +54,8 @@
 	    <ul class="navbar-nav mr-auto"></ul>
 
 	    <form class="form-inline my-2 my-lg-0" method="post">
-				<a href="#">
-					<button class="btn btn-outline-light">Log Out</button>
+				<a class="btn btn-outline-light" role="button" href="../../index.php?logout=1">
+					Log Out
 				</a>
 	    </form>
 
