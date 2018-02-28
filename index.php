@@ -15,8 +15,11 @@
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+	<!-- FONT AWESOME -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
 	<!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Passion+One|Roboto:500" rel="stylesheet">
 
 	<!-- RESET CSS LINK -->
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -32,7 +35,7 @@
 <body>
 	<nav id="login-nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-	  <a class="navbar-brand" href="#">Daily Journal</a>
+	  <a class="navbar-brand" href="#"><span class="logo">Daily Journal</span> <i class="fas fa-pencil-alt"></i></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
