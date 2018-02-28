@@ -2,6 +2,11 @@
 
 	session_start();
 
+	if ($_GET['logout'] == 1 AND $_SESSION['id']) {
+		session_destroy();
+		$message = 'You have been logged out. Have a nice day!';
+	}
+
 	include('connection.php');
 
 
@@ -40,12 +45,11 @@
 
 				mysqli_query($link, $query);
 
-				echo "You've been signed up!";
+				// echo "You've been signed up!";
 
 				$_SESSION['id']=mysqli_insert_id($link);
-				print_r($_SESSION);
-
-				// REDIRECT TO LOGGED IN PAGE
+				
+				header('Location:assets/php/mainpage.php');
 
 			}
 
@@ -65,9 +69,8 @@
 			if ($row) {
 
 				$_SESSION['id'] = $row['id'];
-				print_r($_SESSION);
-
-				// REDIRECT TO LOGGED IN PAGE
+				
+				header('Location:assets/php/mainpage.php');
 
 			} else {
 				$error = 'We could not find a user with that email and password. Please try again.';
