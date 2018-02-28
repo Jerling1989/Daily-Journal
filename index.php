@@ -46,7 +46,7 @@
 
 	      <input class="form-control mr-sm-2" type="password" name="login-password" placeholder="Password" value="<?php echo addslashes($_POST['login-password']); ?>" />
 
-	      <input class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit" value="Log In" />
+	      <input class="btn btn-outline-light my-2 my-sm-0" type="submit" name="submit" value="Log In" />
 	    </form>
 
 	  </div>
