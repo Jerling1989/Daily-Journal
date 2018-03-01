@@ -1,3 +1,4 @@
+<!-- INCLUDE LOGIN.PHP SCRIPT -->
 <?php include('assets/php/login.php'); ?>
 
 <!DOCTYPE html>
@@ -33,27 +34,40 @@
 </head>
 
 <body>
+
+	<!-- TOP NAV & LOGIN BAR -->
 	<nav id="login-nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
+		<!-- APP LOGO -->
 	  <a class="navbar-brand" href="#"><span class="logo">Daily Journal</span> <i class="fas fa-pencil-alt"></i></a>
+
+	  <!-- MOBILE NAV COLLAPSE BUTTON -->
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
+	  <!-- END MOBILE NAV COLLAPSE BUTTON -->
 
+		<!-- LOGIN DIV -->
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	    <ul class="navbar-nav mr-auto"></ul>
 
+			<!-- LOGIN FORM -->
 	    <form class="form-inline my-2 my-lg-0" method="post">
-
+				<!-- EMAIL INPUT -->
 	      <input class="form-control mr-sm-2" type="email" name="login-email" id="login-email" placeholder="Email" value="<?php echo addslashes($_POST['login-email']); ?>" />
-
+				<!-- PASSWORD EMAIL -->
 	      <input class="form-control mr-sm-2" type="password" name="login-password" placeholder="Password" value="<?php echo addslashes($_POST['login-password']); ?>" />
-
+				<!-- SUBMIT BUTTON -->
 	      <input class="btn btn-outline-light my-2 my-sm-0" type="submit" name="submit" value="Log In" />
 	    </form>
-
+	    <!-- END LOGIN FORM -->
+	    
 	  </div>
+	  <!-- END LOGIN DIV -->
+
 	</nav>
+	<!-- END TOP NAV & LOGIN BAR -->
+
 
 	<!-- LOGIN PANEL -->
 	<div class="container">
@@ -68,30 +82,35 @@
 					<br />Interested? Sign Up Below!</p>
 
 					<?php
-
+						// IF ERROR DISPLAY ERROR IN BOOTSTRAP ALERT
 						if($error) {
 							echo '<div class="alert alert-danger" role="alert">'.addslashes($error).'</div>';
 						}
+						// IF LOGGED OUT DISPLAY LOG OUT MESSAGE IN BOOTSTRAP ALERT
 						if($message) {
 							echo '<div class="alert alert-success" role="alert">'.addslashes($message).'</div>';
 						}
-
 					?>
 					
 
 					<!-- SIGN UP FORM -->
 					<form id="signup-form" method="post">
 
+						<!-- EMAIL INPUT -->
 					  <div class="form-group">
 					    <label for="email">Email</label>
 				    	<input type="email" name="email" id="email" class="form-control" placeholder="Enter email" value="<?php echo addslashes($_POST['email']); ?>" />
 					  </div>
+					  <!-- END EMAIL INPUT -->
 
+						<!-- PASSWORD INPUT -->
 					  <div class="form-group">
 					    <label for="password">Password</label>
 				    	<input type="password" name="password" id="password" class="form-control" placeholder="Password" value="<?php echo addslashes($_POST['password']); ?>" />
 					  </div>
+					  <!-- END PASSWORD INPUT -->
 
+						<!-- SUBMIT BUTTON -->
 					  <input id="signup-btn" class="btn btn-dark" type="submit" name="submit" value="Sign Up" />
 
 					</form>
