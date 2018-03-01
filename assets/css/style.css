@@ -3,28 +3,6 @@ html {
 	min-height: 100%;
 }
 
-body {
-	width: 100%;
-	background-image: url(../img/composition-bg.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-#main-page {
-	background-image: url(../img/paper-bg.jpg);
-}
-
-textarea {
-	margin-top: 60px !important;
-	background-color: rgba(255, 255, 255, 0.7) !important;
-	font-family: 'Caveat Brush', cursive !important;
-	font-size: 26px !important;
-}
-
 h1 {
 	padding-top: 60px;
 	color: black !important;
@@ -38,6 +16,17 @@ p {
 	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	padding: 10px;
+}
+
+body {
+	width: 100%;
+	background-image: url(../img/composition-bg.jpg); /* LOGIN PAGE */
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 
@@ -99,4 +88,17 @@ p {
 	width: 100%;
 	margin-top: 25px;
 	margin-bottom: -20px;
+}
+
+
+/* MAIN PAGE STYLES */
+#main-page {
+	background-image: url(../img/paper-bg.jpg);
+}
+
+textarea {
+	margin-top: 60px !important;
+	background-color: rgba(255, 255, 255, 0.7) !important;
+	font-family: 'Caveat Brush', cursive !important;
+	font-size: 26px !important;
 }
