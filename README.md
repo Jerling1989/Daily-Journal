@@ -12,6 +12,7 @@ Daily Journal is a cool web app I built for users to have a place to enter their
 - This is an error for not entering a password.
 ![ERROR-2](assets/img/read_me/errors-2.png)
 
+- Here is an error for not including at least one caplitel letter in the password.
 ![ERROR-3](assets/img/read_me/errors-3.png)
 
 ![ERROR-4](assets/img/read_me/errors-4.png)
