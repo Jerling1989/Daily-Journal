@@ -9,7 +9,7 @@ Daily Journal is a cool web app I built for users to have a place to enter their
  - Below are a few examples of errors the user will see if not signing up for a new account properly. The first is not entering a email address or password.
 ![ERROR-1](assets/img/read_me/errors-1.png)
 
-- 
+- This is an error for not entering a password.
 ![ERROR-2](assets/img/read_me/errors-2.png)
 
 ![ERROR-3](assets/img/read_me/errors-3.png)
