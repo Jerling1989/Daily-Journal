@@ -24,4 +24,5 @@ Daily Journal is a cool web app I built for users to have a place to enter their
 - Here is an example of what the user could type into thier online journal textarea.
 ![JOURNAL-2](assets/img/read_me/journal-2.png)
 
+- This is the screen the user is greeted with once they log out of the app. They can log back on at anytime and all of thier work would have been saved, ready for them to pick up where they left off.
 ![LOUGOUT](assets/img/read_me/logout.png)
