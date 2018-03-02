@@ -18,4 +18,4 @@ Daily Journal is a cool web app I built for users to have a place to enter their
 
 ![JOURNAL-2](assets/img/read_me/journal-2.png)
 
-![LOUGOUT](assets/img/read_me/lougout.png)
+![LOUGOUT](assets/img/read_me/logout.png)
