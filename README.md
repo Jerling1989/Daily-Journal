@@ -21,6 +21,7 @@ Daily Journal is a cool web app I built for users to have a place to enter their
 - This is what the user sees once they have correctly made an account and are logged into the application. There is Bootstrap Alert at the top of the page to let users know that all of thier work and edits are saved automatically.
 ![JOURNAL-1](assets/img/read_me/journal-1.png)
 
+- Here is an example of what the user could type into thier online journal textarea.
 ![JOURNAL-2](assets/img/read_me/journal-2.png)
 
 ![LOUGOUT](assets/img/read_me/logout.png)
