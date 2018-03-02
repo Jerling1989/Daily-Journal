@@ -3,7 +3,7 @@ Daily Journal is a cool web app I built for users to have a place to enter their
 
 ---
 
-
+- This is the first screen the user sees upon loading the application. There is a place for the user to sign in on the top bar of the webpage. In the center of the page there is a form for the user to create a new account.
 ![INTRO](assets/img/read_me/startscreen.png)
 
 ![ERROR-1](assets/img/read_me/errors-1.png)
